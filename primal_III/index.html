@@ -1,0 +1,154 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMAL Spirale en pixel</title>
+    <meta author ='Erwan ALLOT'>
+    <meta descripton ='nombre premier organisation géométrique spirale pixel aire triangle'>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="dom.js"></script>
+    <script async src="variables_initiales.js"></script>
+    <script async src="couleur.js"></script>
+    <script async src="pixel.js"></script>
+    <script async src="impression.js"></script>
+    <script async src="modification.js"></script>
+    <script async src="algo.js"></script>
+    <script async src="primalite.js"></script>
+    <script async src="moteur.js"></script>
+
+</head>
+<body>
+
+    <h1>Une spirale en pixel</h1>
+
+    <p>
+        On a un quadrillage qu'on sépare en 4 zones selon x et y, positif ou négatif.
+        <br>
+        On étudie N et P.
+        <br>
+        A chaque nouveau nombre, on décolore les pixels.
+        <br>
+        Autant de pixels que la valeur du nombre.
+        <br>
+        On procède en diagonale, depuis le centre, du prochain quart de 
+        quadrillage au précédent quart de quadillage.
+        <br>
+        On remplit d'abord la fin d'une diagonale avant de commencer la suivante.
+    </p>
+
+    <p>
+        intérêt : étude des nombres premiers sur une base d'axiome très réduite.
+        <br>
+        rapide d'étude si pas pertinent
+        <br>
+        valeur graphique, parfois c'est joli
+        <br>
+        let's go !!!
+    </p>
+
+    <p>
+        première édition : 27/04/23
+        <br>
+        je trouve finalement mon idée d'hier super cool
+        <br>
+        je voulais juste me faire la main sur le code
+    </p>
+
+    <p>
+        Les algos sont là
+        <br>
+        faîtes-vous plaisir !!!!
+    </p>
+
+    <p>
+        partie explicative :
+        <br>
+
+        <div id="logique">
+            0. chaque nombre premier a une valeur et un rang (ex : 2 a la valeur 2 et le rang 1)
+            <br>
+            1. on pixelise la valeur de chaque nombre pour correspondre à sa valeur
+            <br>
+            2. on répartit les nombres premiers en modulant leur rang par 4, chaque modulation 
+            à son quartier graphique
+            <br>
+            3. on remplit diagonalement les pixels du prochain quartier vers le précédent, en partant 
+            de là on était arrivé
+            <br>
+            => obtention d'un motif + ou - régulier et d'une organisation géométrique (assez inédit)    
+        </div>
+    <br>
+        ==> est-ce vraiment pertinent ???
+        <br>
+        <br>
+        visualisation pour l'instant jusqu'à 25 000.
+    </p>
+
+    
+
+    <div>
+        <h3>Introduction</h3>
+
+        <div id="comparaison_N_et_P">
+            organisation de N
+            <br>
+            nombres naturels
+            <br>
+            1, 2, 3, 4...
+            <img src="images/spiraleValeurNumerique.png" alt="spirale N">
+            <img src="images/pointsPourLesNaturels.png" alt="spirale N">
+    
+            organisation de P
+            <br>
+            nombres premiers
+            <br>
+            2, 3, 5, 7, 11...
+            <img src="images/spirale_nombres_premiers_19.png" alt="spirale P">
+
+                <img src="images/lesPointsDesNombresPremiers.png" alt="">
+        </div>
+
+
+
+
+    </div>
+
+
+    
+    <img src="images/primal.png" alt="">
+    
+    <img src="images/primal_point.png" alt="">
+    <img src="images/primal_spi_ca_a_de_la_gueule.png" alt="">
+
+    <img src="images/primal_spi_3000.png" alt="">
+    
+    <img src="images/primal_spi_3000_bis.png" alt="">
+    <img src="images/primal_spi_17000.png" alt="">
+    <img src="images/primal_25k_aire_pixel_et_rang_modulo_4.png" alt="">
+    <img src="images/primal_25k_spi_rang_modulo_4_valeur_du_nombre.png" alt="">
+    
+
+
+    
+
+
+<!-- <div id="cadre">
+    <div id="cqjv"></div>
+
+    <div id="bon"></div>
+
+    <div id="cadre_Anim_Metatron">
+        <div id="graph">
+            <div id="spirale" class='cube'></div>
+        </div>
+        
+    </div>
+</div>     -->
+
+<!-- <div class="figure_Numero"><strong>Figure 1</strong></div> ???-->
+
+</body>
+</html>
